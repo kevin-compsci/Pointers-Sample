@@ -24,7 +24,7 @@ typedef struct {
 //main driver
 int main() {
 	//local declarations
-	int x = 0, y = 1, z = 2, temp = 0;
+	int x = 0, y = 1, z = 2;
 	int *xp, *yp, *zp;
 
 	//initial values
@@ -43,7 +43,7 @@ int main() {
 
 
 	contain sx, sy, sz;
-	sx.cx = *xp, sy.cy = *yp, sz.cz = *zp;
+	sx.cx = *xp, sy.cy = *yp, sz.cz = *zp; //local struct's copy in memory -- not original!
 	sx.cxp = &sx.cx, sy.cyp = &sy.cy, sz.czp = &sz.cz;
 	*sx.cxp = *sx.cxp * *sx.cxp; *sy.cyp = *sy.cyp * *sy.cyp; *sz.czp = *sz.czp * *sz.czp;
 	printf("::STRUCT SHENANIGANS::\n");
@@ -54,8 +54,23 @@ int main() {
 	printf("Original: The value of y is %d\n", y);
 	printf("Original: The value of z is %d\n\n", z);
 
-
+	//swap first and last values
+	printf("::SWAP FUN::\n");
+	swapFirstLast(xp, yp, zp);
+	printf("The value of x is %d\n", *xp);
+	printf("The value of y is %d\n", *yp);
+	printf("The value of z is %d\n\n", *zp);
   	return 0;
 }
 
 //Functions implementations goes below
+void swapFirstLast(int *xp, int *yp, int *zp) {
+	//local declarations (local copy!)
+	int temp = *zp;
+	zp = xp;
+	xp = &temp;
+	//print results
+	printf("SWAP: The value of x is %d\n", *xp);
+	printf("SWAP: The value of y is %d\n", *yp);
+	printf("SWAP: The value of z is %d\n", *zp);
+}
