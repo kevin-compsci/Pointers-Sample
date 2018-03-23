@@ -55,7 +55,7 @@ int main() {
 
 	//swap first and last values
 	printf("::SWAP FUN::\n");
-	swapFirstLast(xp, yp, zp);
+	swapFirstLast(xp, yp, zp); //function call to swap and print results (local copy!)
 	printf("The value of x is %d\n", *xp);
 	printf("The value of y is %d\n", *yp);
 	printf("The value of z is %d\n\n", *zp);
