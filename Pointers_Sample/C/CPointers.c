@@ -1,5 +1,5 @@
 //Kevin Nguyen
-//Basic program in C (C files) to experiment with pointers.
+//Basic program in C (C files) to experiment with pointers. No further declarations should be allowed because the programmer should only work with the pointers, structs, and functions given.
 
 /*
 How to run (linux):
@@ -13,7 +13,6 @@ How to run (linux):
 
 //function definitions
 void swapFirstLast(int*, int*, int*); //TODO
-
 
 //struct definitions
 typedef struct {
@@ -65,7 +64,7 @@ int main() {
 
 //Functions implementations goes below
 void swapFirstLast(int *xp, int *yp, int *zp) {
-	//local declarations (local copy!)
+	//local declarations (local function copy!)
 	int temp = *zp;
 	zp = xp;
 	xp = &temp;
