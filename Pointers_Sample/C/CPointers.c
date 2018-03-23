@@ -41,7 +41,7 @@ int main() {
 	printf("The value of y+2 is %d\n", y);
 	printf("The value of z+3 is %d\n\n", z);
 
-
+	//Struct operation with local copy of pointers
 	contain sx, sy, sz;
 	sx.cx = *xp, sy.cy = *yp, sz.cz = *zp; //local struct's copy in memory -- not original!
 	sx.cxp = &sx.cx, sy.cyp = &sy.cy, sz.czp = &sz.cz;
