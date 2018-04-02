@@ -1,5 +1,6 @@
 //Kevin Nguyen
 //Basic program in C (C files) to experiment with pointers. No further declarations should be allowed because the programmer should only work with the pointers, structs, and functions given.
+//NOTE: Swap only works within struct, it does not switch references outside the scope of it.
 
 /*
 How to run (linux):
