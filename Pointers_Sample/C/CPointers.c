@@ -2,6 +2,8 @@
 //Basic program in C (C files) to experiment with pointers. No further declarations should be allowed because the programmer should only work with the pointers, structs, and functions given.
 //NOTE: Swap only works within struct, it does not switch references outside the scope of it.
 
+//TODO: Perform swap with struct but actually swap original pointers in memory
+
 /*
 How to run (linux):
 	1.) open command line and cd into directory folder of where this code is
