@@ -29,7 +29,7 @@ int main() {
 	int x = 0, y = 1, z = 2;
 	int *xp, *yp, *zp;
 
-	//initial values
+	//Initial values
 	printf("::INITIAL::\n");
 	printf("The value of x is %d\n", x);
 	printf("The value of y is %d\n", y);
